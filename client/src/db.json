@@ -1,0 +1,139 @@
+{
+  "movies": [
+    {
+      "id": 0,
+      "imdbRating": 3,
+      "smallPoster": "https://flxt.tmsimg.com/assets/p25028_p_v10_aa.jpg",
+      "title": "X-Men",
+      "year": "1689187911354",
+      "type": "series"
+    },
+    {
+      "id": 1,
+      "imdbRating": 9,
+      "smallPoster": "https://m.media-amazon.com/images/M/MV5BM2EwMmRhMmUtMzBmMS00ZDQ3LTg4OGEtNjlkODk3ZTMxMmJlXkEyXkFqcGdeQXVyMjM5ODk1NDU@._V1_.jpg",
+      "title": "The Queen's Gambit",
+      "year": "1689187911354",
+      "type": "series"
+    },
+    {
+      "id": 2,
+      "imdbRating": 8.6,
+      "smallPoster": "https://m.media-amazon.com/images/M/MV5BYmViZGM0MGItZTdiYi00ZDU4LWIxNDYtNTc1NWQ5Njc2N2YwXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_FMjpg_UX1000_.jpg",
+      "title": "Limitless",
+      "year": "1689187911354",
+      "type": "series"
+    }
+  ],
+  "details": [
+    {
+      "id": 0,
+      "imdbRating": 8.6,
+      "smallPoster": "https://flxt.tmsimg.com/assets/p25028_p_v10_aa.jpg",
+      "title": "The Queen's Gambit",
+      "year": "1689187911354",
+      "description": "Події серіалу, заснованого на однойменному творі американського письменника Волтера Тевіса, розгортаються навколо Бет Гармон, що опинилася в дитячому притулку в Кентуккі після того, як в її родині сталася трагедія. Будучи замкнутою і похмурою дівчинкою, Бет випадково відкрила в собі дивовижну здатність до гри в шахи, а також непомітно пристрастилася до транквілізаторів, які використовували в притулку в якості заспокійливого засобу для дітей. Переслідувана особистими демонами і опинившись на слизькому шляху наркозалежності, героїня вступає в доросле життя з єдиною метою — досягти успіху в світі шахів, де домінують чоловіки...",
+      "actors": "actors",
+      "genres": "genres",
+      "countries": "countries",
+      "translation": "translation",
+      "playlist": []
+    },
+    {
+      "id": 1,
+      "imdbRating": 9,
+      "smallPoster": "https://m.media-amazon.com/images/M/MV5BM2EwMmRhMmUtMzBmMS00ZDQ3LTg4OGEtNjlkODk3ZTMxMmJlXkEyXkFqcGdeQXVyMjM5ODk1NDU@._V1_.jpg",
+      "title": "The Queen's Gambit",
+      "year": "1689187911354",
+      "description": "Події серіалу, заснованого на однойменному творі американського письменника Волтера Тевіса, розгортаються навколо Бет Гармон, що опинилася в дитячому притулку в Кентуккі після того, як в її родині сталася трагедія. Будучи замкнутою і похмурою дівчинкою, Бет випадково відкрила в собі дивовижну здатність до гри в шахи, а також непомітно пристрастилася до транквілізаторів, які використовували в притулку в якості заспокійливого засобу для дітей. Переслідувана особистими демонами і опинившись на слизькому шляху наркозалежності, героїня вступає в доросле життя з єдиною метою — досягти успіху в світі шахів, де домінують чоловіки...",
+      "actors": "actors",
+      "genres": "genres",
+      "countries": "countries",
+      "translation": "translation",
+      "playlist": [
+        {
+          "title": "Playhouse VR",
+          "url": "https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8"
+        },
+        {
+          "title": "Oceans AES",
+          "url": "http://playertest.longtailvideo.com/adaptive/oceans_aes/oceans_aes.m3u8"
+        },
+        {
+          "title": "Folgers",
+          "url": "http://cdnbakmi.kaltura.com/p/243342/sp/24334200/playManifest/entryId/0_uka1msg4/flavorIds/1_vqhfu6uy,1_80sohj7p/format/applehttp/protocol/http/a.m3u8"
+        },
+        {
+          "title": "Parkour",
+          "url": "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8"
+        },
+        {
+          "title": "Sintel",
+          "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+        },
+        {
+          "title": "Playhouse VR",
+          "url": "https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8"
+        },
+        {
+          "title": "Oceans AES",
+          "url": "http://playertest.longtailvideo.com/adaptive/oceans_aes/oceans_aes.m3u8"
+        },
+        {
+          "title": "Folgers",
+          "url": "http://cdnbakmi.kaltura.com/p/243342/sp/24334200/playManifest/entryId/0_uka1msg4/flavorIds/1_vqhfu6uy,1_80sohj7p/format/applehttp/protocol/http/a.m3u8"
+        },
+        {
+          "title": "Parkour",
+          "url": "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8"
+        },
+        {
+          "title": "Sintel",
+          "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+        },
+        {
+          "title": "Playhouse VR",
+          "url": "https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8"
+        },
+        {
+          "title": "Oceans AES",
+          "url": "http://playertest.longtailvideo.com/adaptive/oceans_aes/oceans_aes.m3u8"
+        },
+        {
+          "title": "Folgers",
+          "url": "http://cdnbakmi.kaltura.com/p/243342/sp/24334200/playManifest/entryId/0_uka1msg4/flavorIds/1_vqhfu6uy,1_80sohj7p/format/applehttp/protocol/http/a.m3u8"
+        },
+        {
+          "title": "Parkour",
+          "url": "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8"
+        },
+        {
+          "title": "Sintel",
+          "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+        },
+        {
+          "title": "Sintel",
+          "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "imdbRating": 8.6,
+      "smallPoster": "https://m.media-amazon.com/images/M/MV5BYmViZGM0MGItZTdiYi00ZDU4LWIxNDYtNTc1NWQ5Njc2N2YwXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_FMjpg_UX1000_.jpg",
+      "title": "The Queen's Gambit",
+      "year": "1689187911354",
+      "description": "123123123123",
+      "actors": "actors",
+      "genres": "genres",
+      "countries": "countries",
+      "translation": "translation",
+      "playlist": [
+        {
+          "title": "Playhouse VR",
+          "url": "https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8"
+        }
+      ]
+    }
+  ]
+}

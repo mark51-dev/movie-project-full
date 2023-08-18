@@ -1,0 +1,17 @@
+<form [formGroup]="form">
+  <label for="genre">Select Genre:</label>
+  <select id="genre" formControlName="genre">
+    <option *ngFor="let genre of gengres" [value]="genre">{{ genre }}</option>
+  </select>
+
+  <label for="country">Select Country:</label>
+  <select id="country" formControlName="country">
+    <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+  </select>
+
+  <label for="years">Select Year:</label>
+  <select id="years" formControlName="year">
+    <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+  </select>
+  <button (click)="handleClick()">Search</button>
+</form>

@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, .9) 100%), url("./assets/bg.jpg");
+  font-family: "Montserrat", sans-serif;
+  background-attachment: fixed;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}

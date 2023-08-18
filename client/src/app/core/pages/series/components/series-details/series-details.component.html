@@ -1,0 +1,33 @@
+<div *ngIf="series; else loading">
+  <div class="wrapper">
+    <div class="poster">
+      <img [src]="series.posterSmall" alt="">
+    </div>
+    <div class="details">
+      <div class="title">
+        {{series.title}}
+      </div>
+      <div class="rating">
+        <div class="imdb">IMDB: {{series.imdbRating}}</div>
+      </div>
+      <div class="description">
+        {{series.description}}
+      </div>
+    </div>
+  </div>
+  <div class="iframe-wrapper">
+    <app-video-player [playlist]="series.playlist"
+                      *ngIf="series.playlist.length; else emptyPlaylistRef;"></app-video-player>
+  </div>
+</div>
+
+<ng-template #loading>
+  ...Loading
+</ng-template>
+
+
+<ng-template #emptyPlaylistRef>
+  <div class="playlist-warning">
+    Плеер отсутствует для этого фильма или сериала!
+  </div>
+</ng-template>

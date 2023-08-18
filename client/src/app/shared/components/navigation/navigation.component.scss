@@ -1,0 +1,25 @@
+nav {
+  display: flex;
+  background: white;
+  font-weight: bold;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+
+nav li {
+  list-style: none;
+}
+
+nav li a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+
+nav li a:hover {
+  color: #a6a6a6;
+}

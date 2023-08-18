@@ -1,0 +1,59 @@
+.wrapper {
+  padding: 0 0 20px 20px;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 50px;
+
+  .carousel-wrapper {
+    display: flex;
+    scroll-behavior: smooth;
+  }
+
+  .carousel-content {
+    display: flex;
+    gap: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .prev {
+    left: 0;
+    color: white;
+    height: 100%;
+    width: 50px;
+    background: black;
+    opacity: 0.4;
+    transition: opacity .3s ease-in-out;
+  }
+
+  .prev:hover {
+    opacity: 1;
+  }
+
+  .next {
+    right: 0;
+    color: white;
+    height: 100%;
+    width: 50px;
+    background: black;
+    opacity: 0.4;
+    transition: opacity .3s ease-in-out;
+  }
+
+  .next:hover {
+    opacity: 1;
+  }
+}

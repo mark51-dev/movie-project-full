@@ -1,0 +1,13 @@
+<a [routerLink]="['/movies', 'details', movie.imdbId]">
+  <div class="movie-item">
+    <div class="imdb-rating">
+      {{movie.imdbRating}}
+    </div>
+    <div class="poster">
+      <img [src]=movie.posterSmall [alt]="movie.title">
+    </div>
+    <div class="title">
+      {{movie.title}}
+    </div>
+  </div>
+</a>

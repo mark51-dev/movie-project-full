@@ -1,0 +1,35 @@
+<div #playerContainer id="playerContainer" (dblclick)="onFullscreen()" hidePlayerControls hideCursor>
+  <video #video id="videoPlayer" (click)="onPlayStop()"></video>
+  <div class="controls-wrapper">
+    <i class="play fa-solid fa-play" (click)="onPlayStop()" *ngIf="!playStop"></i>
+    <i class="stop fa-solid fa-stop" (click)="onPlayStop()" *ngIf="playStop"></i>
+    <div class="time" *ngIf="durationSeconds && durationMinutes; else time">
+      <span class="minutes">{{padZeros(currentMinutes)}}</span>:<span
+      class="seconds">{{padZeros(currentSeconds)}}</span> |
+      <span class="minutes">{{padZeros(durationMinutes)}}</span>:<span
+      class="seconds">{{padZeros(durationSeconds)}}</span>
+    </div>
+    <div class="video-progress">
+      <input type="range" min="0" max="1" step="0.0001" id="videoProgressControl" #videoProgressControl
+             (input)="onInputVideoProgress()"
+             (change)="onChangeVideoProgress()">
+    </div>
+    <div class="volume-control">
+      <input type="range" min="0" max="1" step="any" #volumeControl (input)="onInputAudio()">
+    </div>
+    <i class="fullscreen fa-solid fa-expand" (click)="onFullscreen()"></i>
+  </div>
+  <i class="play play-main fa-solid fa-play" *ngIf="!playStop" (click)="onPlayStop()"></i>
+  <i class="loading fa-solid fa-circle-notch" *ngIf="loading"></i>
+  <div #qualitySelector></div>
+</div>
+<app-playlist-container [videoPlaylist]="playlist" *ngIf="playlist.length"></app-playlist-container>
+
+<ng-template #time>
+  <div class="time">
+    <span class="minutes">00</span>:<span
+    class="seconds">00</span> |
+    <span class="minutes">00</span>:<span
+    class="seconds">00</span>
+  </div>
+</ng-template>

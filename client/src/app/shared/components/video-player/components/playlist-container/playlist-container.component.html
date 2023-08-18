@@ -1,0 +1,4 @@
+<app-playlist-item *ngFor="let item of videoPlaylist; let i = index" [playlistItem]="item"
+                   (click)="selectedVideoByIndex(i)" [class.border-target]="i === selectedIndex">
+  <i class="play fa-solid fa-play" *ngIf="i === selectedIndex"></i><span class="playlist-item-number" *ngIf="videoPlaylist.length > 1">{{i + 1}}.</span>
+</app-playlist-item>

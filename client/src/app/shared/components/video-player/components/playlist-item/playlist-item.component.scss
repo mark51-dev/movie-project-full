@@ -1,0 +1,30 @@
+.playlist-item {
+  padding: 15px 20px;
+  transition: all .25s;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: bold;
+  border-radius: 30px;
+  background: rgb(25, 29, 180);
+  background: linear-gradient(149deg, rgba(24, 187, 156, 1) 0%, rgba(106, 57, 175, 1) 42%, rgba(187, 24, 148, 1) 72%, rgba(115, 53, 134, 1) 100%);
+  color: white;
+  user-select: none;
+  background-size: 200%;
+}
+
+.playlist-item:hover {
+  color: white;
+  animation: gradient 2s alternate infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 20% 100%;
+  }
+  100% {
+    background-position: 80% 0;
+  }
+}

@@ -1,0 +1,8 @@
+<div class="movies-container">
+  <app-movies-item *ngFor="let item of movieList" [movie]="item"></app-movies-item>
+</div>
+
+<div class="pagination">
+  <button (click)="prevPage()" class="pagination-button" [disabled]="currentPage < 2">Prev page</button>
+  <button (click)="nextPage()" class="pagination-button" [disabled]="currentPage >= checkLastPage()">Next page</button>
+</div>
