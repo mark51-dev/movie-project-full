@@ -2,6 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { MainService } from './main.service';
 import { CreateMainDto } from './dto/create-main.dto';
 import { UpdateMainDto } from './dto/update-main.dto';
+import { lastValueFrom } from 'rxjs';
 
 @Controller('main')
 export class MainController {
@@ -13,9 +14,12 @@ export class MainController {
   }
 
   @Get()
-  findAll() {
-    console.log('333');
-    return this.mainService.findAll();
+  async findAll() {
+    const [movies, series] = await lastValueFrom(this.mainService.findAll());
+    return {
+      movies,
+      series,
+    };
   }
 
   @Get(':id')

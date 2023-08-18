@@ -16,13 +16,10 @@ export class MainService {
   }
 
   findAll() {
-    forkJoin([
+    return forkJoin([
       this.moviesService.findAll(),
       this.seriesService.findAll(),
-    ]).subscribe(([result1, result2]) => {
-      console.log(result1 + ' ' + result2); // Вывод: "Hello World"
-    });
-    return `This action returns all main`;
+    ]);
   }
 
   findOne(id: number) {
