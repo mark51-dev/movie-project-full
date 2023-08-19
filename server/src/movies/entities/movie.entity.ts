@@ -47,6 +47,9 @@ export class Movie {
   @Column('decimal', { default: 0.0, precision: 6, scale: 1 })
   imdbRating: number;
 
+  @Column('text', { nullable: true })
+  type: string;
+
   @Column('text', { array: true })
   playlist: string[];
 }

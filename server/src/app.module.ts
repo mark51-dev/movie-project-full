@@ -30,7 +30,7 @@ import { SearchModule } from './search/search.module';
     MoviesModule,
     SeriesModule,
     MainModule,
-    // SearchModule,
+    SearchModule,
   ],
   controllers: [AppController],
   providers: [AppService],

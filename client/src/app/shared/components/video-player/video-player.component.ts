@@ -92,6 +92,9 @@ export class VideoPlayerComponent implements OnInit, AfterViewInit, OnDestroy {
   onPlayStop() {
     this.video.nativeElement[this.playStop ? 'pause' : 'play']();
     this.playerService.setPlayStatus(!this.playStop);
+    if (this.playStop) {
+      this.playerService.hls.startLoad();
+    }
   }
 
   initEvents() {

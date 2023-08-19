@@ -7,7 +7,7 @@ import Hls from "hls.js";
 })
 export class PlayerService {
 
-  hls: Hls = new Hls()
+  hls: Hls = new Hls({autoStartLoad : false})
   private volume: Subject<any> = new Subject()
   private videoProgress: BehaviorSubject<any> = new BehaviorSubject(0)
   private playStatusProp: BehaviorSubject<any> = new BehaviorSubject(false)

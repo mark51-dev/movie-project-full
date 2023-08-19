@@ -44,21 +44,23 @@ export class SearchFilterComponent implements OnInit {
     'Бразилия',
   ];
   years: any = [];
+  types: any = ['movie', 'series'];
   constructor(private fb: FormBuilder, private cdr: ChangeDetectorRef, private router: Router, private route: ActivatedRoute) {
   }
   formInit() {
     this.form = this.fb.group({
       genre: this.fb.control(''),
-      year: this.fb.control('2023'),
+      year: this.fb.control(''),
       country: this.fb.control(''),
+      type: this.fb.control('series')
     });
 
     this.generateYearArray();
-
   }
 
   ngOnInit(): void {
     this.formInit();
+    this.form.patchValue(this.route.snapshot.queryParams);
   }
 
   generateYearArray() {

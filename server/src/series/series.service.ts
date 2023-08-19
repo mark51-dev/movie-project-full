@@ -15,7 +15,12 @@ export class SeriesService {
     return this.seriesRepository.save(createSeriesDto);
   }
 
-  findAll() {
+  findAll(params?: Record<any, any>) {
+    if (params) {
+      return this.seriesRepository.find({
+        where: params,
+      });
+    }
     return this.seriesRepository.find();
   }
 

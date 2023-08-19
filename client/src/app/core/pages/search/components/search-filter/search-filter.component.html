@@ -1,4 +1,9 @@
 <form [formGroup]="form">
+  <label for="type">Select type:</label>
+  <select id="type" formControlName="type">
+    <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+  </select>
+
   <label for="genre">Select Genre:</label>
   <select id="genre" formControlName="genre">
     <option *ngFor="let genre of gengres" [value]="genre">{{ genre }}</option>

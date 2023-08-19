@@ -1,4 +1,13 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  Query,
+} from '@nestjs/common';
 import { SearchService } from './search.service';
 import { CreateSearchDto } from './dto/create-search.dto';
 import { UpdateSearchDto } from './dto/update-search.dto';
@@ -13,9 +22,8 @@ export class SearchController {
   }
 
   @Get()
-  findAllByFilter() {
-    return '123';
-    // return this.searchService.findAllByQueryParams();
+  findAllByFilter(@Query() queryParams) {
+    return this.searchService.findAllByQueryParams(queryParams);
   }
 
   @Get(':id')

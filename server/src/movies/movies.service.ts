@@ -15,7 +15,12 @@ export class MoviesService {
     return this.movieRepository.save(createMoviesDto);
   }
 
-  findAll() {
+  findAll(params?: Record<any, any>) {
+    if (params) {
+      return this.movieRepository.find({
+        where: params,
+      });
+    }
     return this.movieRepository.find();
   }
 

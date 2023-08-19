@@ -1,13 +1,15 @@
 import { Injectable } from '@nestjs/common';
 import { CreateSearchDto } from './dto/create-search.dto';
 import { UpdateSearchDto } from './dto/update-search.dto';
-import { MoviesService } from '../movies/movies.service';
-import { SeriesService } from '../series/series.service';
+import { MoviesService } from 'src/movies/movies.service';
+import { SeriesService } from 'src/series/series.service';
 
 @Injectable()
 export class SearchService {
-  constructor(private moviesService: MoviesService, private seriesService: SeriesService) {
-  }
+  constructor(
+    private moviesService: MoviesService,
+    private seriesService: SeriesService,
+  ) {}
   create(createSearchDto: CreateSearchDto) {
     return 'This action adds a new search';
   }
@@ -16,11 +18,12 @@ export class SearchService {
     return `This action returns all search`;
   }
 
-  findAllByQueryParams(type: 'movie' | 'series') {
+  findAllByQueryParams(queryParams: Record<any, any>) {
+    const { type } = queryParams;
     if (type === 'movie') {
-      return this.moviesService.findAll();
+      return this.moviesService.findAll(queryParams);
     } else {
-      return this.seriesService.findAll();
+      return this.seriesService.findAll(queryParams);
     }
   }
 
