@@ -7,10 +7,11 @@ import { SearchItemComponent } from './components/search-item/search-item.compon
 import { SearchContainerComponent } from './components/search-container/search-container.component';
 import { SearchFilterComponent } from './components/search-filter/search-filter.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FilterCustomSelectComponent } from './components/filter-custom-select/filter-custom-select.component';
 
 
 @NgModule({
-  declarations: [SearchPageComponent, SearchItemComponent, SearchContainerComponent, SearchFilterComponent],
+  declarations: [SearchPageComponent, SearchItemComponent, SearchContainerComponent, SearchFilterComponent, FilterCustomSelectComponent],
   imports: [
     CommonModule,
     SearchRoutingModule,

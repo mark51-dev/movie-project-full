@@ -17,9 +17,29 @@ export class MoviesService {
 
   findAll(params?: Record<any, any>) {
     if (params) {
-      return this.movieRepository.find({
-        where: params,
-      });
+      // return this.movieRepository.find({
+      //   where: params,
+      // });
+      const { type, genre, country, year } = params;
+
+      const query = this.movieRepository.createQueryBuilder('movies');
+      console.log(type, genre, country);
+
+      query.where('movies.type = :type', { type });
+
+      if (genre && genre.length > 0) {
+        query.andWhere(':genre = ANY(movies.genres)', { genre });
+      }
+
+      if (country && country.length > 0) {
+        query.andWhere(':country = ANY(movies.countries)', { country });
+      }
+
+      if (year && year.length > 0) {
+        query.andWhere(':year = ANY(movies.year)', { year });
+      }
+
+      return query.getMany();
     }
     return this.movieRepository.find();
   }

@@ -17,9 +17,25 @@ export class SeriesService {
 
   findAll(params?: Record<any, any>) {
     if (params) {
-      return this.seriesRepository.find({
-        where: params,
-      });
+      const { type, genre, country, year } = params;
+
+      const query = this.seriesRepository.createQueryBuilder('series');
+
+      query.where('series.type = :type', { type });
+
+      if (genre && genre.length > 0) {
+        query.andWhere(':genre = ANY(series.genres)', { genre });
+      }
+
+      if (country && country.length > 0) {
+        query.andWhere(':country = ANY(series.countries)', { country });
+      }
+
+      if (year && year.length > 0) {
+        query.andWhere(':year = ANY(series.year)', { year });
+      }
+
+      return query.getMany();
     }
     return this.seriesRepository.find();
   }

@@ -1,22 +1,19 @@
 <form [formGroup]="form">
-  <label for="type">Select type:</label>
-  <select id="type" formControlName="type">
-    <option *ngFor="let type of types" [value]="type">{{ type }}</option>
-  </select>
-
-  <label for="genre">Select Genre:</label>
-  <select id="genre" formControlName="genre">
-    <option *ngFor="let genre of gengres" [value]="genre">{{ genre }}</option>
-  </select>
-
-  <label for="country">Select Country:</label>
-  <select id="country" formControlName="country">
-    <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
-  </select>
-
-  <label for="years">Select Year:</label>
-  <select id="years" formControlName="year">
-    <option *ngFor="let year of years" [value]="year">{{ year }}</option>
-  </select>
-  <button (click)="handleClick()">Search</button>
+  <div>
+    <label for="type">Select type:</label>
+    <app-filter-custom-select id="type" [itemList]="types" formControlName="type"></app-filter-custom-select>
+  </div>
+  <div>
+    <label for="genre">Select Genre:</label>
+    <app-filter-custom-select id="genre" [itemList]="gengres" formControlName="genre"></app-filter-custom-select>
+  </div>
+  <div>
+    <label for="country">Select Country:</label>
+    <app-filter-custom-select id="country" [itemList]="countries" formControlName="country"></app-filter-custom-select>
+  </div>
+  <div>
+    <label for="years">Select Year:</label>
+    <app-filter-custom-select id="years" [itemList]="years" formControlName="year"></app-filter-custom-select>
+  </div>
+  <button (click)="handleClick()" class="search-button">Search</button>
 </form>

@@ -3,6 +3,7 @@ import { CreateSearchDto } from './dto/create-search.dto';
 import { UpdateSearchDto } from './dto/update-search.dto';
 import { MoviesService } from 'src/movies/movies.service';
 import { SeriesService } from 'src/series/series.service';
+import { forkJoin } from 'rxjs';
 
 @Injectable()
 export class SearchService {
@@ -15,10 +16,13 @@ export class SearchService {
   }
 
   findAll() {
-    return `This action returns all search`;
+    return forkJoin([
+      this.moviesService.findAll(),
+      this.seriesService.findAll(),
+    ]);
   }
 
-  findAllByQueryParams(queryParams: Record<any, any>) {
+  async findAllByQueryParams(queryParams: Record<any, any>) {
     const { type } = queryParams;
     if (type === 'movie') {
       return this.moviesService.findAll(queryParams);

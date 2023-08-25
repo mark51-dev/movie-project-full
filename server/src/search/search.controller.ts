@@ -11,6 +11,7 @@ import {
 import { SearchService } from './search.service';
 import { CreateSearchDto } from './dto/create-search.dto';
 import { UpdateSearchDto } from './dto/update-search.dto';
+import { lastValueFrom } from 'rxjs';
 
 @Controller('search')
 export class SearchController {
@@ -20,8 +21,12 @@ export class SearchController {
   create(@Body() createSearchDto: CreateSearchDto) {
     return this.searchService.create(createSearchDto);
   }
-
   @Get()
+  findAll() {
+    return lastValueFrom(this.searchService.findAll());
+  }
+
+  @Get('filter')
   findAllByFilter(@Query() queryParams) {
     return this.searchService.findAllByQueryParams(queryParams);
   }

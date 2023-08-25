@@ -1,3 +1,18 @@
 :host {
   color: white;
 }
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+form div {
+  margin-top: 20px;
+}
+
+.search-button {
+  padding: 5px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}

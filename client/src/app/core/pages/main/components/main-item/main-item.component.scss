@@ -11,10 +11,15 @@
   background-color: #474747;
 }
 
+.poster {
+  height: 160px;
+}
+
 .poster img {
   max-width: 100%;
   border-radius: 10px;
   max-height: 100%;
+  width: 100%;
 }
 
 .title {

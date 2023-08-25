@@ -1,0 +1,6 @@
+<div class="wrapper">
+  <input type="text" (click)="toggleShowList()" [value]="default || value" class="list-input" #selectedItemInput readOnly>
+  <div *ngIf="showList" class="list-container" (click)="selectItem($event)">
+    <div *ngFor="let listItem of itemList" class="list-item">{{listItem}}</div>
+  </div>
+</div>

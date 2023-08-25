@@ -10,11 +10,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class SearchFilterComponent implements OnInit {
 
   form: FormGroup;
-  gengres = ['Экшн',
+  gengres: string[] = ['Экшн',
     'Приключения',
     'Комедия',
     'Драма',
-    'Ужасы',
+    'Уажасы',
     'Мистика',
     'Романтика',
     'Научная фантастика',
@@ -52,7 +52,7 @@ export class SearchFilterComponent implements OnInit {
       genre: this.fb.control(''),
       year: this.fb.control(''),
       country: this.fb.control(''),
-      type: this.fb.control('series')
+      type: this.fb.control('')
     });
 
     this.generateYearArray();
@@ -76,13 +76,14 @@ export class SearchFilterComponent implements OnInit {
       queryParams: this.removeUndefinedFields(this.form.getRawValue()),
       relativeTo: this.route,
     })
+    console.log(this.form.getRawValue());
   }
 
   removeUndefinedFields(obj: any) {
     const cleanedObject: any = {};
     for (const key in obj) {
       if (obj[key] !== '') {
-        cleanedObject[key] = obj[key];
+        cleanedObject[key] = obj[key].toLowerCase();
       }
     }
     return cleanedObject;

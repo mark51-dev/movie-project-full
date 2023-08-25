@@ -1,7 +1,7 @@
 <a [routerLink]="['/', searchResultItem.type === 'movie' ? 'movies': 'series', 'details', searchResultItem.imdbId]">
   <div class="movie-item">
     <div class="imdb-rating">
-<!--      {{movie.imdbRating}}-->
+      {{searchResultItem.imdbRating}}
     </div>
     <div class="poster">
       <img src="{{searchResultItem.posterSmall}}">
